@@ -1,0 +1,7 @@
+*.cls
+*.aux
+*.blg
+*.bbl
+*~
+*.fdb_latexmk
+*.fls

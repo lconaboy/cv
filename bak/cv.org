@@ -1,0 +1,40 @@
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS:
+# #+LATEX_HEADER:\usepackage{fancyhdr}
+# #+LATEX_HEADER:\pagestyle{fancyplain}
+# #+LATEX_HEADER:\cfoot{Last updated: \today}
+#+LATEX_HEADER:
+#+LATEX_HEADER_EXTRA:
+#+DESCRIPTION:
+#+KEYWORDS:
+#+SUBTITLE:
+#+LATEX_COMPILER: pdflatex
+#+DATE: \today
+
+Luke Conaboy
+
+e: l.conaboy _at_ sussex.ac.uk
+
+* Education
+** University of Sussex
+   September 2018 -- present
+
+   PhD 
+** University of Nottingham
+   September 2014 -- June 2018
+
+   MSci (Hons.) Physics with Astronomy First Class
+   
+* Talks
+** CLUES Mid-Term Meeting
+   Online, November 2020
+** Third Global 21cm Conference
+   Online (Cambridge), October 2020
+** RAS Specialist Meeting
+   London, January 2020
+
+* Publications
+
+* Teaching
+
+Last updated: \today
