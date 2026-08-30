@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
@@ -17,6 +17,7 @@
 % character encoding
 %\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage{sansmath}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -28,7 +29,7 @@
 \name{Luke}{Conaboy}
 % \title{Résumé title}                               % optional, remove / comment the line if not wanted
 % \born{}                                 % optional, remove / comment the line if not wanted
-\address{Centre for Astronomy and Particle Theory, University of Nottingham}{NG7 2RD}{UK}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{Centre for Astronomy and Particle Theory\\ University of Nottingham \\}{NG7 2RD}{UK}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 % \phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 % \phone[fixed]{+2~(345)~678~901}
 % \phone[fax]{+3~(456)~789~012}
@@ -76,32 +77,64 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-\section{Employment}
-\cventry{2023--present}{\normalfont Research Fellow}{\normalfont
-  University of Nottingham}{Nottingham, UK}{}{Advisor: Prof James
-  Bolton}
+Computational astrophysicist researching the first galaxies and the
+intergalactic medium using large-scale cosmological
+radiation-hydrodynamical simulations and machine learning.
 
-\cventry{2022--2023}{\normalfont Research Associate}{\normalfont
-  University of Nottingham}{Nottingham, UK}{}{Advisor: Dr Emma
-  Chapman}
+\section{Employment}
+\cventry{2023--present}{\normalfont Research Fellow in Computational Astrophysics}{University of Nottingham}{Nottingham, UK}{}{Advisor: Prof James Bolton}
+\cventry{2022--2023}{\normalfont Research Associate}{University of Nottingham}{Nottingham, UK}{}{Advisor: Dr Emma Chapman}
+
+
 \section{Education}
-\cventry{2018--2022}{\normalfont PhD Astronomy}{\normalfont University of Sussex}{Brighton,
-  UK}{}{Supervisor: Prof Ilian Iliev \\ Thesis: Simulations of structure formation and feedback at high redshift}  % arguments 3 to 6 can be left empty
-\cventry{2014--2018}{\normalfont MSci Physics with Astronomy}{\normalfont University of
-  Nottingham}{Nottingham, UK}{}{Degree classification: First}
+\cventry{2018--2022}{\normalfont PhD Astronomy}{ University of
+  Sussex}{Brighton, UK}{}{Supervisor: Prof Ilian Iliev \\ Thesis:
+  Simulations of structure formation and feedback at high
+  redshift} % arguments 3 to 6 can be left empty
+\cventry{2014--2018}{\normalfont MSci Physics with Astronomy}{
+  University of Nottingham}{Nottingham, UK}{}{Degree classification:
+  First \\ Thesis: Investigating the response in African climate
+  anomalies to the El Ni\~no--Southern Oscillation}
+
+
+\section{Computing skills}
+  \cventry{}{\normalfont I am a proficient user of various programming languages and numerical modelling codes, those which I have used extensively are listed below. I am also a developer and contributor to open source projects, selected projects are listed below.}{}{}{}{}
+  \cventry{Languages}{\normalfont Python (\texttt{tensorflow, pytorch, numpy, scipy,
+      matplotlib, mpi4py, yt}), Fortran, bash/sh, MPI, C/C++, Matlab, \texttt{git}}{}{}{}{}
+  
+  \cventry{Codes}{\normalfont \texttt{ramses, music, camb, gadget, aton}}{}{}{}{}
+  
+  \cventry{Other}{\normalfont Linux, High performance computing,
+    \LaTeX, GitHub}{}{}{}{}
+  \cventry{Projects}{\normalfont \texttt{drft}}{\normalfont Python/MPI/Fortran code used in Conaboy et al. (2023) to modify simulation initial conditions to include the effect of supersonic relative baryon--dark matter velocities.}{}{}{Repository: \href{https://github.com/lconaboy/drft}{\texttt{https://github.com/lconaboy/drft}}}
+  \cventry{}{\normalfont \texttt{r2g}}{\normalfont Version of open source MPI/Fortran simulation format conversion code, modified to analyse the petabyte-scale cosmological simulation Cosmic Dawn III.}{}{}{Repository: \href{https://github.com/lconaboy/r2g}{\texttt{https://github.com/lconaboy/r2g}}}
+
 
 \section{Publications}
-\cventry{}{\normalfont I am an author on seven peer-reviewed articles
-  (two as first author) on astrophysics ($h$-$\mathsf{index}=5$).}{}{}{}{}
+\cventry{}{\normalfont I am an author on eight peer-reviewed articles
+  (plus three in review, and two in preparation), three of which I am the
+  lead author (118 citations, $h$-$\mathsf{index}=6$). Publications
+  marked with an asterisk indicate work led by students where I played
+  a major role in supervision or collaboration.}{}{}{}{}
 
 \subsection{\em First author}
+\cventry{2026}{\normalfont{\em Impact of source and survey modelling on the galaxy--Ly $\alpha$ transmission correlation}}{}{\textbf{Conaboy}, Bolton, Keating, Haehnelt, Kulkarni, Puchwein}{in prep.}{}
 \cventry{2025}{\normalfont{\em The connection between high-redshift galaxies and Lyman $\alpha$ transmission in the Sherwood-Relics simulations of patchy reionisation}}{}{\textbf{Conaboy}, Bolton, Keating, Haehnelt, Kulkarni, Puchwein}{MNRAS 539(3)}{}
 
 \cventry{2023}{\normalfont{\emph{Relative baryon-dark matter velocities in cosmological zoom simulations}}}{}{\textbf{Conaboy}, Iliev, Fialkov, Dixon, Sullivan}{MNRAS 525(4)}{}
 
 \subsection{\em Coauthor}
-\cventry{2025}{\normalfont{\em Square Kilometre Array Science Data Challenge 3a: Foreground removal for an EoR experiment}}{}{SKA Data Challenge participants, \textbf{Conaboy}}{MNRAS 543(2)}{}
-\cventry{}{\normalfont{\em Reionization in HESTIA: Studying reionization in the LG through zoom simulations}}{}{Attard, \textbf{Conaboy}, Libeskind, Pillipenko, Dixon, Iliev}{arXiv e-prints}{}
+\cventry{2026}{\normalfont{\emph{Double-Peaked Lyα Emission during Reionization Requires Nearby Voids and a Favorable Local Ionizing Background}}}{}{Park, Smith, Jung, Yajima, Ocvirk, Lewis, {\bf Conaboy}, Shapiro, Iliev, Ahn, Lee, Sorce, Dubois}{arXiv e-prints}{}
+
+\cventry{}{*\normalfont{\em Temperature measurements from quasar spectra with machine learning}}{}{Sawyer, Bolton,
+  \textbf{Conaboy}, and Becker}{in prep.}{}
+\cventry{2025}{\normalfont{\em Dust-UV offsets in high-redshift
+    galaxies in the Cosmic Dawn III simulation}}{}{Ocvirk, Lewis,
+  \textbf{Conaboy}, Dubois, Bethermin, Sorce, Aubert, Shapiro,
+  Dawoodbhoy, Lee, Teyssier, Yepes, Gottl\"ober, Iliev, Ahn, and
+  Park}{A\&A 703}{}
+\cventry{}{\normalfont{\em Square Kilometre Array Science Data Challenge 3a: Foreground removal for an EoR experiment}}{}{SKA Data Challenge participants, \textbf{Conaboy}}{MNRAS 543(2)}{}
+\cventry{}{*\normalfont{\em Reionization in HESTIA: Studying reionization in the LG through zoom simulations}}{}{Attard, \textbf{Conaboy}, Libeskind, Pillipenko, Dixon, Iliev}{arXiv e-prints}{}
   
 \cventry{}{\normalfont{\em The Thermal Sunyaev-Zel'dovich Effect
     from the Epoch of Reionization}}{}{Iliev, Hosein, Chluba, \textbf{Conaboy}, Attard, Mondal, Ahn, Gottl\"ober, Lewis, Ocvirk, Park,
@@ -116,14 +149,7 @@
     analyses of 21 cm reionization maps}}{}{Sooknunan, Chapman,
   \textbf{Conaboy}, Mortlock, and Pritchard}{arXiv e-prints}{}
 
-  
-\cventry{}{\normalfont{\em Dust-UV offsets in high-redshift
-    galaxies in the Cosmic Dawn III simulation}}{}{Ocvirk, Lewis,
-  \textbf{ Conaboy}, Dubois, Bethermin, Sorce, Aubert, Shapiro,
-  Dawoodbhoy, Lee, Teyssier, Yepes, Gottl\"ober, Iliev, Ahn, and
-  Park}{arXiv e-prints (in review)}{}
-
-\cventry{}{\normalfont{\emph{The Lyman-limit photon mean free path
+\cventry{}{*\normalfont{\emph{The Lyman-limit photon mean free path
       at the end of late reionization in the Sherwood–Relics
       simulations}}}{}{Feron, \textbf{Conaboy}, Bolton, Chapman,
   Haehnelt, Keating, Kulkarni, Puchwein}{MNRAS 532(2)}{}
@@ -135,52 +161,7 @@
   \textbf{Conaboy}, Shapiro, Dawoodbhoy, Teyssier, Yepes,
   Gottl\"{o}ber, Ahn, Iliev, Th\'{e}lie}{MNRAS 516(3)}{}
 
-  \section{Conference proceedings}
-  \cventry{2022}{\normalfont{\emph{The Reionisation of the Local
-        Universe in the Hestia Suite}}}{John von Neumann
-    Institute for Computing Symposium}{\textbf{Conaboy},
-    Iliev, Libeskind}{}{}
 
-  \section{Supervision}
-  % \cventry{2022-present}{\normalfont{Assistant supervisor to a PhD
-  %     student}}{}{}{University of
-  %     Nottingham}{}{}
-  \subsection{Assistant supervisor}
-  \cventry{2022-present}{\normalfont{Jennifer Feron}}{}{}{PhD, University of Nottingham}{}{}
-
-  
-  \section{Talks}
-  \cventry{Oct 2025}{\normalfont{CCS Colloquium}}{\normalfont{CCS, Tsukuba}}{{\bfseries invited}}{}{}
-  \cventry{Oct 2025}{\normalfont{KMM Discussion Meeting}}{\normalfont{NAOJ, Tokyo}}{{\bfseries invited}}{}{}
-  \cventry{Sep 2025}{\normalfont{Kaba Kada EoR Meeting}}{\normalfont{Port Douglas}}{}{}{}
-  \cventry{Apr 2025}{\normalfont{Cake Talk}}{\normalfont{DAWN, Copenhagen}}{}{}{}
-  \cventry{Feb 2024}{\normalfont{Astronomy Colloquium}}{\normalfont{ICC, Durham}}{{\bfseries invited}}{}{}
-  \cventry{Nov 2023}{\normalfont{TIFR State of the Universe}}{\normalfont{TIFR, Mumbai (online)}}{}{}{}
-  \cventry{Nov 2023}{\normalfont{Cambridge Galaxies Discussion Group}}{\normalfont{KICC, Cambridge}}{{\bfseries invited}}{}{}
-  \cventry{Jun 2023}{\normalfont{CLUES Meeting 2023}}{\normalfont{LMU CAS, Munich}}{}{}{}
-  % \cventry{Jul 2022}{\normalfont{\emph{Hestia in the EoR}}}{}{CLUES Meeting 2022}{Madrid}{}
-  \cventry{Jul 2022}{\normalfont{CLUES Meeting 2022}}{\normalfont{UAM, Madrid}}{}{}{}
-  \cventry{Sep 2021}{\normalfont{RAMSES User Meeting 2021}}{\normalfont{online}}{}{}{}
-  % \cventry{Sep 2021}{\normalfont{\emph{Baryon drift effects at
-  %       high-redshift}}}{}{RAMSES User Meeting 2021}{online}{}
-
-  % \cventry{Dec 2020}{\normalfont{\emph{Baryon drift effects on
-  %       small-scale structure}}}{}{PhD in a Pandemic 2020}{online}{}
-  \cventry{Dec 2020}{\normalfont{PhD in a Pandemic 2020}}{\normalfont{online}}{}{}{}
-  
-  % \cventry{Nov 2020}{\normalfont{\emph{Local Group zoom simulations
-  %       and baryon drift}}}{}{CLUES Mid-term Meeting}{online}{}
-  \cventry{Nov 2020}{\normalfont{CLUES Mid-term Meeting}}{\normalfont{online}}{}{}{}
-  
-  % \cventry{Oct 2020}{\normalfont{\emph{Baryon drift effects on small-scale
-  %       structure}}}{}{Third Global 21cm Meeting}{online}{}
-  \cventry{Oct 2020}{\normalfont{Third Global 21cm Meeting}}{\normalfont{online}}{}{}{}
-
-  % \cventry{Jan 2020}{\normalfont{\emph{Cosmological
-  %       reionisation}}}{}{RAS Specialist Meeting}{London, UK}{}
-    \cventry{Oct 2020}{\normalfont{RAS Specialist Meeting}}{{\normalfont London, UK}}{}{}{}
-
-    \clearpage
   \section{Grants}
   % \subsection{Summary}
     % \cventry{}{\normalfont The approximate monetary value of each compute time award
@@ -189,10 +170,10 @@
 
   \cventry{}{\normalfont I have been involved in multiple successful
     applications for computing time, both at national and
-    international facilities. The total monetary value of the result
-    of these applications is over £1M in compute time, of which £660k
-    is as Co-PI. The approximate monetary value of each compute time
-    award is estimated using the core-hour rate offered by the
+    international facilities. The total monetary value of these
+    successful applications is over £1M in compute time, of which
+    £660k is as Co-PI. The approximate monetary value of each compute
+    time award is estimated using the core-hour rate offered by the
     University of Nottingham of £0.015 per core-hour (Oct
     2025).}{}{}{}{}
   
@@ -224,6 +205,57 @@
     (PI: Prof James Bolton) \textbf{12.7M core-h}}{£190k}{}{}{}
 
   \cventry{2021}{\normalfont PRACE, Beskow/Dardel KTH (Stockholm, Sweden) computing time (PI: Prof Ilian Iliev) \textbf{12.0M core-h}}{£180k}{}{}{}
+
+
+  \section{Conference proceedings}
+  \cventry{2022}{\normalfont{\emph{The Reionisation of the Local
+        Universe in the Hestia Suite}}}{John von Neumann
+    Institute for Computing Symposium}{\textbf{Conaboy},
+    Iliev, Libeskind}{}{}
+
+  \section{Supervision}
+  % \cventry{2022-present}{\normalfont{Assistant supervisor to a PhD
+  %     student}}{}{}{University of
+  %     Nottingham}{}{}
+  \subsection{Assistant supervisor}
+  \cventry{2022-present}{\normalfont{Fiona Sawyer}}{}{}{PhD, University of Nottingham}{}{}
+  \cventry{2022-2026}{\normalfont{Jennifer Feron}}{}{}{PhD, University of Nottingham}{}{}
+
+  
+  \section{Selected talks}
+  \cventry{Apr 2026}{\normalfont{Charting Cosmic Dawn in Copenhagen}}{\normalfont{Helsing\o r}}{}{}{}
+  \cventry{Mar 2026}{\normalfont{Astronomy seminar}}{\normalfont{online}}{{\bfseries invited}}{}{}
+  \cventry{Jan 2026}{\normalfont{E.A. Milne Centre for Astrophysics 10th Anniversay}}{\normalfont{University of Hull}}{}{}{}
+  \cventry{Oct 2025}{\normalfont{CCS Colloquium}}{\normalfont{CCS, Tsukuba}}{{\bfseries invited}}{}{}
+  \cventry{Oct 2025}{\normalfont{KMM Discussion Meeting}}{\normalfont{NAOJ, Tokyo}}{{\bfseries invited}}{}{}
+  \cventry{Sep 2025}{\normalfont{Kaba Kada EoR Meeting}}{\normalfont{Port Douglas}}{}{}{}
+  \cventry{Apr 2025}{\normalfont{Cake Talk}}{\normalfont{DAWN, Copenhagen}}{}{}{}
+  \cventry{Feb 2024}{\normalfont{Astronomy Colloquium}}{\normalfont{ICC, Durham}}{{\bfseries invited}}{}{}
+  \cventry{Nov 2023}{\normalfont{TIFR State of the Universe}}{\normalfont{TIFR, Mumbai (online)}}{}{}{}
+  \cventry{Nov 2023}{\normalfont{Cambridge Galaxies Discussion Group}}{\normalfont{KICC, Cambridge}}{{\bfseries invited}}{}{}
+  \cventry{Jun 2023}{\normalfont{CLUES Meeting 2023}}{\normalfont{LMU CAS, Munich}}{}{}{}
+  % \cventry{Jul 2022}{\normalfont{\emph{Hestia in the EoR}}}{}{CLUES Meeting 2022}{Madrid}{}
+  \cventry{Jul 2022}{\normalfont{CLUES Meeting 2022}}{\normalfont{UAM, Madrid}}{}{}{}
+  \cventry{Sep 2021}{\normalfont{RAMSES User Meeting 2021}}{\normalfont{online}}{}{}{}
+  % \cventry{Sep 2021}{\normalfont{\emph{Baryon drift effects at
+  %       high-redshift}}}{}{RAMSES User Meeting 2021}{online}{}
+
+  % \cventry{Dec 2020}{\normalfont{\emph{Baryon drift effects on
+  %       small-scale structure}}}{}{PhD in a Pandemic 2020}{online}{}
+  \cventry{Dec 2020}{\normalfont{PhD in a Pandemic 2020}}{\normalfont{online}}{}{}{}
+  
+  % \cventry{Nov 2020}{\normalfont{\emph{Local Group zoom simulations
+  %       and baryon drift}}}{}{CLUES Mid-term Meeting}{online}{}
+  \cventry{Nov 2020}{\normalfont{CLUES Mid-term Meeting}}{\normalfont{online}}{}{}{}
+  
+  % \cventry{Oct 2020}{\normalfont{\emph{Baryon drift effects on small-scale
+  %       structure}}}{}{Third Global 21cm Meeting}{online}{}
+  \cventry{Oct 2020}{\normalfont{Third Global 21cm Meeting}}{\normalfont{online}}{}{}{}
+
+  % \cventry{Jan 2020}{\normalfont{\emph{Cosmological
+  %       reionisation}}}{}{RAS Specialist Meeting}{London, UK}{}
+    \cventry{Oct 2020}{\normalfont{RAS Specialist Meeting}}{{\normalfont London, UK}}{}{}{}
+
   
   \section{Awards and press releases}
   \cventry{2022}{\normalfont Physics Finalist}{}{STEM for Britain}{}{Selected to present a poster in the Houses of Parliament to members of both Houses. Attendance covered in \href{https://www.inyourarea.co.uk/news/leicestershire-scientist-to-present-star-formation-research-in-uk-parliament}{\underline{local news media}}, including BBC radio.}
@@ -232,8 +264,8 @@
   % \cventry{2022-present}{\normalfont Square Kilometre Array-Epoch of Reionisation (SKA-EoR) data challenge team}{}{}{}{}
   % \cventry{2018-present}{\normalfont Cosmic Dawn (CoDa) simulation team}{}{}{}{}
 
-  \section{Conferences and workshops}
-  \subsection{Organising}
+
+  \section{Conference, workshop, and seminar organisation}
   \cventry{2025}{\normalfont EAS 2025 SS22 -- Modelling the first billion years}{SOC}{Cork, Ireland}{}{Selecting talks}
   \cventry{2022--present}{\normalfont University of Nottingham Astronomy Seminar Series}{Organiser}{Nottingham, UK}{}{Inviting and hosting guest speakers}
   \cventry{2020}{\normalfont SAZERAC 2020}{LOC}{online}{}{Moderating discussion}
@@ -248,15 +280,21 @@
     MATLAB}{University of Sussex}{}{}{Assisting with workshops,
     marking.}
   
-  \section{Computing skills}
-  \cventry{}{\normalfont I am an experienced user of various programming languages and astophysical codes, those which I have used extensively are listed below.}{}{}{}{}
-  \cventry{Languages}{\normalfont Python (\texttt{numpy, scipy,
-      matplotlib, mpi4py, yt}), Fortran, bash/sh, MPI, C/C++, Matlab}{}{}{}{}
-  
-  \cventry{Codes}{\normalfont \texttt{ramses, music, camb, gadget, aton}}{}{}{}{}
-  
-  \cventry{Other}{\normalfont Linux, High performance computing,
-    \LaTeX}{}{}{}{}
+
+  \section{Languages}
+\cventry{native}{{\normalfont English}}{}{}{}{}
+\cventry{beginner}{{\normalfont Danish, French (GCSE)}}{}{}{}{}
+  \section{References}
+  \cventry{}{\normalfont{Prof James Bolton}}{School of Physics and
+    Astronomy, The University of Nottingham, University Park,
+    Nottingham, NG7 2RD,
+    UK}{\texttt{james.bolton@nottingham.ac.uk}}{}{}{}
+  \cventry{}{\normalfont{Prof Ilian Iliev}}{Astronomy Centre,
+    Department of Physics \& Astronomy, University of Sussex,
+    Brighton, BN1 9QH, UK}{\texttt{i.t.iliev@sussex.ac.uk}}{}{}{}
+  \cventry{}{\normalfont{Dr Pierre Ocvirk}}{Observatoire Astronomique
+    de Strasbourg - UMR 7550 11 rue de l'Université 67000 Strasbourg
+    France}{\texttt{pierre.ocvirk@astro.unistra.fr}}{}{}{}
 
   % \subsection{Attended}
   % %\cventry{Year}{Conf}{}{}{}{}
